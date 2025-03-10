@@ -1,9 +1,14 @@
 ﻿/* General body styling */
 body {
+    transform: scale(0.85);
+    transform-origin: top;
+    transform-origin: left;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgba(211, 211, 211, 0.2); /* Misty light grey overlay */
+    width: 118%;
+    
 }
 
 /* Header Section (Above Navbar) */
@@ -128,4 +133,9 @@ thead th {
     font-size: 21px; /* Slightly larger font */
     text-align: left; /* Align to the left */
     padding: 12px;
+}
+/* Flip effect on hover */
+.bio-container img:hover,
+.hobbies-container img:hover {
+    transform: rotateY(180deg);
 }
