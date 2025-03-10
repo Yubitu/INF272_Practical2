@@ -20,6 +20,7 @@ namespace INF272_Practical2.Controllers
                 new Models.PersonModel { StudentNumber = "u24650677", FirstName = "Ashton", LastName = "Theron", Email = "u24650677@tuks.co.za", MyLink = Url.Content("~/HTML/Ashton.html") },
                 new Models.PersonModel { StudentNumber = "u24924718", FirstName = "Gundo", LastName = "Ndou", Email = "u24924718@tuks.co.za", MyLink = Url.Content("~/HTML/Gundo.html") }
             };
+            ViewBag.Students = students;
             //return the view
             return View(students);
         }
