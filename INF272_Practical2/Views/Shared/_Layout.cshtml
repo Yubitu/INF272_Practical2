@@ -1,38 +1,38 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="../Content/stylesheet.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            <span class="navbar-brand">Simple Starting Sample</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            @Html.ActionLink("Simple Starting Sample", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- DROPDOWN MENU -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            List of People
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="@Url.Content("~/HTML/Tristan.html")">Tristan Bosman</a></li>
-                            <li><a class="dropdown-item" href="@Url.Content("~/HTML/Tayla.html")">Tayla Walther</a></li>
-                            <li><a class="dropdown-item" href="@Url.Content("~/HTML/Tia.html")">Tia Naidoo</a></li>
-                            <li><a class="dropdown-item" href="@Url.Content("~/HTML/Ashton.html")">Ashton Theron</a></li>
-                            <li><a class="dropdown-item" href="@Url.Content("~/HTML/Gundo.html")">Gundo Ndou</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- LINK TO LISTSTUDENTS -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("ListStudents", "People")">List Students</a>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                List of People
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Complete List of People", "ListStudents", "People", null, new { @class = "dropdown-item" })</li>
+                                <li><a class="dropdown-item" href="~/HTML/Tristan.html">Tristan</a></li>
+                                <li><a class="dropdown-item" href="~/HTML/Tayla.html">Tayla</a></li>
+                                <li><a class="dropdown-item" href="~/HTML/Tia.html">Tia</a></li>
+                                <li><a class="dropdown-item" href="~/HTML/Ashton.html">Ashton</a></li>
+                                <li><a class="dropdown-item" href="~/HTML/Gundo.html">Gundo</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

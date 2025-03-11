@@ -4,18 +4,7 @@
     ViewBag.Title = "ListStudents";
 }
 
-<h2>ListStudents</h2>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        List of People
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        @foreach (var item in Model)
-        {
-            <li><a class="dropdown-item" href="@Url.Content(item.MyLink)">@item.FirstName @item.LastName</a></li>
-        }
-    </ul>
-</div>
+<h2>List of People</h2>
 <table class="table">
     <tr>
         <th>
