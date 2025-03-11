@@ -22,30 +22,38 @@ body {
         font-weight: bold;
         margin: 0;
     }
-/* Navigation menu styling */
-nav ul {
+
+.navbar {
+    width: 100vw;
+    padding: 0; 
+}
+    nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #222; /* Dark background */
     border-top: 1px solid #444; /* Slightly thicker */
     border-bottom: 1px solid #444;
+    width: 100%;
 }
 
-nav ul li {
-    padding: 0px;
-}
+        nav ul li {
+            padding: 0px;
+            flex-grow: 1; /* Ensures each link takes equal space */
+            text-align: center;
+        }
 
     nav ul li a {
         color: rgba(255, 255, 255, 0.8); /* Slightly faded white */
         text-decoration: none;
         display: block;
-        padding: 15px 90px; /* Adjust padding to make links touch */
+        padding: 30px 0; /* Adjust padding to make links touch */
         border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
         transition: all 0.3s ease;
+        width: 100%;
     }
 
 /* Hover and active state */
