@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tristan</title>
-    <link rel="stylesheet" href="/Content/styles.css"> <!-- Link to a shared CSS file -->
+    <link rel="stylesheet" href="/Content/styles.css" /> <!-- Link to a shared CSS file -->
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
 </head>
 <body>
     <h1>Tristan Bosman</h1>
@@ -21,63 +22,54 @@
             <li><a href="javascript:history.back()" class="menu-link">BACK</a></li>
         </ul>
     </nav>
-    <!-- Section 1: Biography and Image -->
-    <section id="bio">
-        <h2>Biography and Background</h2>
-        <div class="bio-container">
-            <img src="/HTML/Images/tristan1.jpg" alt="Tristan" class="flip-image">
-            <p>Tristan Bosman was born in Johannesburg, and he went to school in Midrand. He is currently studying BIT (IS) through the Data
-            Science Management stream. He beleives that it is the most beneficial stream to take as you walk away with information system skills
-            like programming, along with data science concepts like statistics which has a good synergy with IS skills.</p>
+
+    <div class="bio-container tristan-bio-container mt-4">
+        <div class="row">
+            <!-- Column 1: Biography -->
+            <div class="col-md-4" style="border-right: 4px solid black; padding: 20px;">
+                <h2>Biography and Background</h2>
+                <img src="/HTML/Images/tristan1.jpg" alt="Tristan" class="img-fluid mb-2 flip-image" style="float: left; margin-right: 20px;">
+                <p>
+                    Tristan Bosman was born in Johannesburg, and he went to school in Midrand. He is currently studying BIT (IS) through the Data
+                    Science Management stream. He believes that it is the most beneficial stream to take as you walk away with information system skills
+                    like programming, along with data science concepts like statistics which has a good synergy with IS skills.
+                </p>
+            </div>
+
+            <!-- Column 2: Hobbies -->
+            <div class="col-md-4" style="border-right: 4px solid black; padding: 20px;">
+                <h2>Hobbies</h2>
+                <p style="width: 50%; float: left; text-align: left;">Tristan loves to go on adventures with friends. He plays video games and enjoys having intellectual conversations.</p>
+                <img src="/HTML/Images/tristan2.jpg" alt="Tristan's Hobby" class="img-fluid mt-2 flip-image"style="float: right; margin-left: 15px; margin-left: 20px;">
+            </div>
+
+            <!-- Column 3: Modules -->
+            <div class="col-md-4" style="padding: 20px;">
+                <h2>Modules</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Semester 1</th>
+                            <th>Semester 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>INF214</td><td>INF225</td></tr>
+                        <tr><td>INF271</td><td>INF271</td></tr>
+                        <tr><td>INF272</td><td>INF272</td></tr>
+                        <tr><td>FIL251</td><td>INF261</td></tr>
+                        <tr><td>JCP201</td><td>JCP201</td></tr>
+                        <tr><td>STK210</td><td>STK220</td></tr>
+                        <tr><td>WST212</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </section>
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <div class="hobbies-container">
-            <p>Tristan loves to go on adventures with friends. He plays video games and enjoys having intellectual conversations.</p>
-            <img src="/HTML/Images/tristan2.jpg" alt="Tristan's' Hobby" class="flip-image">
-        </div>
-    </section>
-     <section id="modules">
-         <h2>Modules</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Semester 1</th>
-                    <th>Semester 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>INF214</td>
-                    <td>INF225</td>
-                </tr>
-                <tr>
-                    <td>INF271</td>
-                    <td>INF271</td>
-                </tr>
-                <tr>
-                    <td>INF272</td>
-                    <td>INF272</td>
-                </tr>
-                <tr>
-                    <td>FIL251</td>
-                    <td>INF261</td>
-                </tr>
-                <tr>
-                    <td>JCP201</td>
-                    <td>JCP201</td>
-                </tr>
-                <tr>
-                    <td>STK210</td>
-                    <td>STK220</td>
-                </tr>
-                <tr>
-                    <td>WST212</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    </div>
+
+    <!-- jQuery script -->
+    <script src="../Scripts/jquery-3.7.0.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="../Scripts/bootstrap.js"></script>
 </body>
 </html>

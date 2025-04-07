@@ -23,11 +23,10 @@ body {
         margin: 0;
     }
 
-.navbar {
-    width: 100vw;
-    padding: 0; 
+nav {
+    padding: 5px 0;
 }
-    nav ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,24 +36,25 @@ body {
     border-top: 1px solid #444; /* Slightly thicker */
     border-bottom: 1px solid #444;
     width: 100%;
+    height: 10px;
 }
 
-        nav ul li {
-            padding: 0px;
-            flex-grow: 1; /* Ensures each link takes equal space */
-            text-align: center;
-        }
+nav ul li {
+    padding: 0px;
+    flex-grow: 1; /* Ensures each link takes equal space */
+    text-align: center;
+}
 
-    nav ul li a {
-        color: rgba(255, 255, 255, 0.8); /* Slightly faded white */
-        text-decoration: none;
-        display: block;
-        padding: 30px 0; /* Adjust padding to make links touch */
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent;
-        transition: all 0.3s ease;
-        width: 100%;
-    }
+nav ul li a {
+    color: rgba(255, 255, 255, 0.8); /* Slightly faded white */
+    text-decoration: none;
+    display: block;
+    padding: 30px 0; /* Adjust padding to make links touch */
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    width: 100%;
+}
 
 /* Hover and active state */
 nav ul li a:hover,
@@ -142,5 +142,25 @@ thead th {
 /* Flip effect on hover */
 .bio-container img:hover,
 .hobbies-container img:hover {
+    transform: rotateY(180deg);
+}
+/* Add black border around Bootstrap panels */
+.panel {
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+/* Biography panel image styling */
+.panel-body img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    float: left;
+    transition: transform 0.6s ease;
+}
+
+/* Adjust image hover effect */
+.panel-body img:hover {
     transform: rotateY(180deg);
 }

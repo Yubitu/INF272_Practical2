@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayla</title>
     <link rel="stylesheet" href="/Content/styles.css"> <!-- Link to a shared CSS file -->
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
 </head>
 <body>
     <h1>Tayla Walther</h1>
@@ -21,51 +22,60 @@
             <li><a href="javascript:history.back()" class="menu-link">BACK</a></li>
         </ul>
     </nav>
-    <section id="bio">
-        <h2>Biography and Background</h2>
-        <div class="bio-container">
-            <img src="/HTML/Images/tayla1.jpg" alt="Tayla" class="flip-image">
-            <p>
-                Tayla Walther was born the Eastrand, and went to school at Ashton College. She is in her final year of BA Law with plans to
-                persue her LLB from next year. She is very determined and will acheive great things.
-            </p>
+    <div class="bio-container mt-4" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Panel 1: Biography -->
+        <div class="panel panel-default" style="border: 2px solid black; border-radius: 6px; width: 80%">
+            <div class="panel-heading">
+                <h2 class="panel-title">Biography and Background</h2>
+            </div>
+            <div class="panel-body">
+                <img src="/HTML/Images/tayla1.jpg" alt="Tayla" class="img-fluid mb-2" style="float: left; margin-right: 20px;">
+                <p>
+                    Tayla Abrahams grew up in Cape Town and is passionate about technology and design. She is currently pursuing a degree in BIT (IS), focusing on how technology can be used to improve communication and solve real-world problems.
+                </p>
+            </div>
         </div>
-    </section>
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <div class="hobbies-container">
-            <p>Tayla loves fashion and wants to start designing her own clothes. She enjoys binging series, gymming, and hiking occasionally.</p>
-            <img src="/HTML/Images/tayla2.jpg" alt="Tayla's Hobby" class="flip-image">
+
+        <!-- Panel 2: Hobbies -->
+        <div class="panel panel-default" style="border: 2px solid black; border-radius: 6px; width: 80%">
+            <div class="panel-heading">
+                <h2 class="panel-title">Hobbies</h2>
+            </div>
+            <div class="panel-body">
+                <img src="/HTML/Images/tayla2.jpg" alt="Tayla's Hobby" class="img-fluid mb-2" style="float: right; margin-left: 15px; margin-left: 20px;">
+                <p>
+                    In her free time, Tayla enjoys digital illustration, music production, and hiking. She finds creative hobbies therapeutic and believes they contribute to her problem-solving skills in tech projects.
+                </p>
+            </div>
         </div>
-    </section>
-    <section id="modules">
-        <h2>Modules</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Semester 1</th>
-                    <th>Semester 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>KRM310</td>
-                    <td>KRM320</td>
-                </tr>
-                <tr>
-                    <td>JUR310</td>
-                    <td>ERF222</td>
-                </tr>
-                <tr>
-                    <td>KTR211</td>
-                    <td>KHT220</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>DLR320</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+
+        <!-- Panel 3: Modules -->
+        <div class="panel panel-default" style="border: 2px solid black; border-radius: 6px; width: 80%">
+            <div class="panel-heading">
+                <h2 class="panel-title">Modules</h2>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Semester 1</th>
+                            <th>Semester 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>INF214</td><td>INF225</td></tr>
+                        <tr><td>INF271</td><td>INF271</td></tr>
+                        <tr><td>INF272</td><td>INF272</td></tr>
+                        <tr><td>FIL251</td><td>INF261</td></tr>
+                        <tr><td>JCP201</td><td>JCP201</td></tr>
+                        <tr><td>STK210</td><td>STK220</td></tr>
+                        <tr><td>WST212</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/jquery-3.7.0.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
 </body>
 </html>

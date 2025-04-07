@@ -23,7 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.MyLink)
         </th>
-        <th></th>
+        <th>
+            Delete
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -45,7 +47,45 @@
                 @Html.ActionLink("LINK", null, null, new { href = Url.Content(item.MyLink) })
             </td>
             <td>
+                @*Add new button to table for delete*@
+                <button class="btn btn-danger delete" onclick="Delete(this)">Delete</button>
             </td>
         </tr>
     }
 </table>
+
+@section scripts {
+    <script type="text/javascript">
+
+        // Function to delete the row when the delete button is clicked
+        function Delete(button) {
+            // Find the closest tr that contains the clicked button
+            var row = button.parentElement.parentElement;  // Going two levels up to the tr element
+            row.remove();  // Remove the row from the table
+            saveTableToLocalStorage(); //save to local storage using function
+        }
+
+        // Function to save table content to localStorage
+        function saveTableToLocalStorage() {
+            var tableBody = document.getElementById("info");
+            const tableData = JSON.stringify(tableBody.innerHTML);
+            localStorage.setItem("tableData", tableData);
+        }
+        window.onload = function () {
+            const table = document.querySelector("table");
+            const rows = table.rows;
+
+            //start at 1 to skip header
+            for (let i = 1; i < rows.length; i++) {
+                const firstNameCell = rows[i].cells[1]; // First Name is in column index 1
+
+                if (firstNameCell.textContent.trim().startsWith("T")) {
+                    // Loop through the first 4 cells and make them red
+                    for (let j = 0; j < 4; j++) {
+                        rows[i].cells[j].style.color = "red";
+                    }
+                }
+            }
+        };
+    </script>
+}

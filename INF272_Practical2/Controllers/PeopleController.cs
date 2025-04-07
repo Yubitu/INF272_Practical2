@@ -24,5 +24,6 @@ namespace INF272_Practical2.Controllers
             //return the view
             return View(students);
         }
+
     }
 }
